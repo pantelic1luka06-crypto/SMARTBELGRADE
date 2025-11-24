@@ -1,16 +1,13 @@
-body{
-    font-family: Work Sans;
-}
-
-h1{
-    text-align: center;
-    font-size: 30pt;
-}
 
 header{
     color: black;
     position:fixed;
     width: 100%;
+    font-size: 60px;
+    text-align: center;
+}
+.naslov{
+    padding-top: 50px;
 }
 
 #bg-video {
@@ -31,3 +28,30 @@ header{
     margin-top: 30vh;
     font-family: sans-serif;
 } */
+ .dugmad{
+    display: flex;
+    height: 100vh;
+ }
+
+.dugmici{
+   flex: 1;
+   display: flex;
+    justify-content: center; 
+    align-items: center;  
+
+}
+.dugme{
+    background-color: transparent;
+    flex: 1;
+    color: white;
+    border: white solid 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin: 100px;
+    
+}
+.dugme:hover{
+    background-color: black;
+    color: white;
+}
