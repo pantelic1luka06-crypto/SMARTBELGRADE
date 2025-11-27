@@ -3,13 +3,13 @@ body{
 
 }
 
-/* .naslov{
+ .naslov{
     margin: 0;
     padding: 0;
     color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 50pt;
-} */
+} 
 
 #bg-video {
     position: fixed;
@@ -21,15 +21,15 @@ body{
     z-index: -1; /* šalje video iza sadržaja */
 }
 
-/* .content {
+ .content {
     position: relative;
     z-index: 1;
     color: white;
     text-align: center;
     margin-top: 30vh;
     font-family: sans-serif;
-} */
- /* .dugmad{
+} 
+  .dugmad{
     display: flex;
     height: 100vh;
  }
@@ -55,4 +55,4 @@ body{
 .dugme:hover{
     background-color: black;
     color: white;
-} */
+} 
