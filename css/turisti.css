@@ -4,6 +4,10 @@ body{
     padding: 6rem 2rem;
     background: var(background);
     display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 .proba{
    display: flex;
@@ -12,6 +16,7 @@ body{
    justify-content: center;
    max-width: 1200px;
    gap: 1.5rem;
+   padding: 10px;
    
    
 }
