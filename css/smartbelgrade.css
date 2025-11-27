@@ -1,18 +1,4 @@
 
-
- .naslov{
-    margin: 0;
-    padding: 0;
-    color: black;
-    background-color: white;
-    border: solid;
-    border-radius: 2%;
-    font-weight: bold;
-    font-size: 50pt;
-    text-align: center;
-    font-family: "Playfair Display", serif;
-} 
-
 #bg-video {
     position: fixed;
     top: 0;
@@ -30,32 +16,5 @@
     text-align: center;
     margin-top: 30vh;
     font-family: sans-serif;
-} 
-  .dugmad{
-    display: flex;
-    height: 100vh;
- }
-
-.dugmici{
-   flex: 1;
-   display: flex;
-    justify-content: center; 
-    align-items: center;  
-
-}
-.dugme{
-    background-color: transparent;
-    flex: 1;
-    color: white;
-    border: white solid 5px;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    margin: 100px;
-    
-}
-.dugme:hover{
-    background-color: black;
-    color: white;
 } 
 
