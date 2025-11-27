@@ -1,14 +1,16 @@
-body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
 
-}
 
  .naslov{
     margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255);
+    color: black;
+    background-color: white;
+    border: solid;
+    border-radius: 2%;
     font-weight: bold;
     font-size: 50pt;
+    text-align: center;
+    font-family: "Playfair Display", serif;
 } 
 
 #bg-video {
@@ -56,3 +58,4 @@ body{
     background-color: black;
     color: white;
 } 
+
