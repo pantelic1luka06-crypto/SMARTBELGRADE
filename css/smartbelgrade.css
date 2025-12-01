@@ -1,60 +1,58 @@
-
-header{
-    color: black;
-    position:fixed;
-    width: 100%;
-    font-size: 60px;
-    text-align: center;
-}
-.naslov{
-    padding-top: 50px;
-}
-
 #bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* popunjava ekran bez deformacije */
-    z-index: -1; /* šalje video iza sadržaja */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* popunjava ekran bez deformacije */
+  z-index: -1; /* šalje video iza sadržaja */
 }
 
-/* .content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    margin-top: 30vh;
-    font-family: sans-serif;
-} */
- .dugmad{
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  margin-top: 30vh;
+  font-family: sans-serif;
+}
+
+*{
+  font-family:'Times New Roman', Times, serif;
+}
+
+.naslov {
+  color: white;
+  text-align: center;
+  font-size: 60pt;
+  text-decoration: none;
+  font-weight: 100;
+  word-spacing: 30px;
+  font-weight: 300;
+}
+
+.buttons{
     display: flex;
-    height: 100vh;
- }
-
-.dugmici{
-   flex: 1;
-   display: flex;
-    justify-content: center; 
-    align-items: center;  
-
-}
-.dugme{
-    background-color: transparent;
-    flex: 1;
-    color: white;
-    border: white solid 5px;
     justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    margin: 100px;
-    
+    margin-top: 300px;
+    gap: 200px;
 }
-.dugme:hover{
-    background-color: black;
-    color: white;
+
+button{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 34px;
+    cursor: pointer;
+    border: 1px solid white;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
-.dugme::after::before{
-    width: 100%;
+
+button:hover{
+    background-color: white;
+    color: rgb(0, 0, 0);
+    transition-duration: 500ms;
 }
