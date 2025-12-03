@@ -1,0 +1,30 @@
+body{
+    background-image: url("/pozadina.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    
+}
+#nav1{
+    background-color: transparent;
+    font-size: 3rem;
+    position: fixed;
+    text-align: center;
+}
+#li1{
+display: inline;
+}
+#ul1{
+    display: flex;
+    gap: 150px;
+    list-style: none;
+}
+#a1{
+    text-decoration: none;
+    color: red;
+}
