@@ -7,10 +7,6 @@ body{
     display: flex;
     gap: 130px;
     justify-content: center;
-
-    
-   
-    
 }
 .meni {
     position: relative;
@@ -43,8 +39,6 @@ body{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     z-index: 1;
 }
-
-
 .padajuci a {
     display: block;
     padding: 10px;
@@ -52,14 +46,11 @@ body{
     color: black;
     border-radius: 6px;
 }
-
-
 .meni:hover .padajuci {
     display: block;
     transition-delay: 5s;
+    pointer-events: auto;
 }
-
-
 .padajuci a:hover {
     background-color: #f1f1f1;
 }
