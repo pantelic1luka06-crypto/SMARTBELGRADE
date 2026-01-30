@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/turisti.css">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
 </head>
 <body style="background-image: url(/slike/pobednik.jpg);">
 <div class="container1">
@@ -103,29 +105,43 @@
       
     </div>
     <br><br><br><br><br>
-    <div class="nocnizivot" id="nocnizivot">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores architecto voluptatibus, corporis qui accusamus magnam at cumque placeat magni praesentium nobis nemo reprehenderit! Tempore nisi quaerat at saepe, accusantium commodi!
-Expedita voluptatum mollitia, voluptas vel accusamus rem quibusdam corrupti aliquid consectetur voluptatibus aspernatur. Est cumque deleniti ad ratione veniam! Impedit numquam, incidunt dolorem inventore reprehenderit voluptate ullam quae laborum rerum.
-Ut voluptas vero a velit. Illum eius sequi suscipit magnam deleniti itaque recusandae dolorem labore corporis sint doloremque est aliquam nihil at modi, explicabo magni quo fugit. Et, sed quibusdam.
-Veritatis architecto ea qui minus corporis, cupiditate obcaecati pariatur, mollitia praesentium et inventore odio natus sit! Dolore excepturi dicta illum saepe nihil, unde reiciendis sapiente doloribus sit eligendi nulla? Harum!
-Reiciendis fugiat delectus nulla maiores rem ad blanditiis eum, quas, magnam voluptates error voluptatem doloribus doloremque ipsum eius rerum natus, officiis ea totam ullam harum illo cupiditate. Inventore, soluta corporis?
-Mollitia porro doloremque dolore velit tenetur illo omnis non qui dolor eos explicabo, sit laborum libero delectus repellendus minus repellat autem debitis reiciendis veniam! Nesciunt ullam reprehenderit aperiam ratione dolore.
-Assumenda, sapiente repellendus blanditiis quasi saepe nostrum maiores ad sint odio facere qui sunt corporis optio! Asperiores non a libero ut molestias nobis maxime recusandae dolorum? Reprehenderit tempore vel minus!
-Quod error tenetur nam, voluptate magni maiores cumque fugit assumenda explicabo facere saepe illo atque fugiat neque deserunt itaque quidem, exercitationem beatae nesciunt necessitatibus. Ea, numquam natus! Vero, autem iusto.
-Saepe nesciunt dignissimos incidunt numquam blanditiis iusto totam repellat non voluptas dolorem illum quae, modi dolore quam, fugiat reprehenderit inventore, nam laboriosam expedita animi suscipit rem alias impedit. Quia, eligendi.
-Eos delectus laboriosam iste molestias perspiciatis fugit nulla odio earum omnis, rem cum, ipsam aperiam veritatis perferendis vitae ratione eius deserunt, quas molestiae sequi voluptatibus placeat accusamus aspernatur! Nulla, sequi?
+    
+    <div class="navigacija" id="navigacija">
+        <div id="map"></div>
+        <div class="navigacijatext">
+            Beograd postaje pametniji uz digitalnu navigaciju prilagođenu modernom načinu kretanja.
+            Interaktivna mapa povezuje ključne lokacije grada u jednu jasnu i preglednu celinu.
+            Pametni markeri i rute pomažu ti da se brzo i efikasno krećeš kroz urbani prostor.
+            Bilo da si turista ili lokalac, informacije su dostupne u realnom vremenu i na jednom mestu.
+            Navigacija je osmišljena da uštedi vreme i unapredi svakodnevno iskustvo grada.
+        </div>
     </div>
     <br><br><br><br><br>
-    <div class="navigacija" id="navigacija">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur non officiis, deleniti optio qui temporibus aliquid illo. Assumenda tenetur voluptatum vitae consequatur nulla perferendis natus ullam. Aspernatur fugiat harum quidem?
-Recusandae officia reiciendis ipsum? Aut asperiores saepe recusandae earum dolore at, facere dicta temporibus porro nemo cupiditate vitae harum corrupti iure doloribus eius optio aspernatur. Placeat eaque reiciendis animi voluptatem?
-Rem aliquam et, doloremque id quam est sapiente voluptates nulla repudiandae delectus, accusamus eum quo similique! Maxime officiis laborum fugiat, nulla deleniti quam labore optio, corrupti tenetur, dignissimos nam facilis.
-Sequi tempora tenetur asperiores quas sit laudantium laboriosam possimus natus dolores deleniti provident unde rerum, cum reiciendis quam modi nemo quia quis molestiae, voluptatibus sint distinctio ratione corporis culpa? Eum.
-Suscipit sed earum atque reiciendis sit. Aliquam consequatur, eos accusantium in, recusandae repellat tempore ab enim fugit molestiae debitis voluptatibus? Possimus rerum voluptate quo nam reprehenderit distinctio modi blanditiis nulla.
-Aspernatur quidem vitae nam ducimus deleniti? Vel ut distinctio, unde in nobis architecto omnis dolorem mollitia nam tenetur repellendus, labore, sapiente quidem exercitationem voluptatem quam ratione velit harum modi quas.
-Laboriosam natus magnam in ea asperiores quas assumenda, vero eum nesciunt tempore obcaecati doloribus, impedit vitae. Ea alias doloremque sequi provident distinctio, error, animi soluta nostrum, sunt quod aperiam nulla.
-Illum nesciunt debitis et quia atque? Recusandae ipsum aperiam doloremque pariatur accusamus, rem repudiandae libero assumenda. Corrupti veniam minus cupiditate at, quos velit cum ipsum nam laborum porro atque nostrum.
-Necessitatibus repellendus aut voluptatum, est, dolorem voluptas vitae excepturi delectus deserunt blanditiis ipsa dignissimos aperiam officia eaque harum, ducimus laudantium molestias nulla! Beatae debitis quod repellat necessitatibus saepe, laudantium eius?
+    <div class="nocnizivot" id="nocnizivot">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores architecto voluptatibus, corporis qui accusamus
+        magnam at cumque placeat magni praesentium nobis nemo reprehenderit! Tempore nisi quaerat at saepe, accusantium
+        commodi!
+        Expedita voluptatum mollitia, voluptas vel accusamus rem quibusdam corrupti aliquid consectetur voluptatibus
+        aspernatur. Est cumque deleniti ad ratione veniam! Impedit numquam, incidunt dolorem inventore reprehenderit
+        voluptate ullam quae laborum rerum.
+        Ut voluptas vero a velit. Illum eius sequi suscipit magnam deleniti itaque recusandae dolorem labore corporis sint
+        doloremque est aliquam nihil at modi, explicabo magni quo fugit. Et, sed quibusdam.
+        Veritatis architecto ea qui minus corporis, cupiditate obcaecati pariatur, mollitia praesentium et inventore odio
+        natus sit! Dolore excepturi dicta illum saepe nihil, unde reiciendis sapiente doloribus sit eligendi nulla? Harum!
+        Reiciendis fugiat delectus nulla maiores rem ad blanditiis eum, quas, magnam voluptates error voluptatem doloribus
+        doloremque ipsum eius rerum natus, officiis ea totam ullam harum illo cupiditate. Inventore, soluta corporis?
+        Mollitia porro doloremque dolore velit tenetur illo omnis non qui dolor eos explicabo, sit laborum libero delectus
+        repellendus minus repellat autem debitis reiciendis veniam! Nesciunt ullam reprehenderit aperiam ratione dolore.
+        Assumenda, sapiente repellendus blanditiis quasi saepe nostrum maiores ad sint odio facere qui sunt corporis optio!
+        Asperiores non a libero ut molestias nobis maxime recusandae dolorum? Reprehenderit tempore vel minus!
+        Quod error tenetur nam, voluptate magni maiores cumque fugit assumenda explicabo facere saepe illo atque fugiat
+        neque deserunt itaque quidem, exercitationem beatae nesciunt necessitatibus. Ea, numquam natus! Vero, autem iusto.
+        Saepe nesciunt dignissimos incidunt numquam blanditiis iusto totam repellat non voluptas dolorem illum quae, modi
+        dolore quam, fugiat reprehenderit inventore, nam laboriosam expedita animi suscipit rem alias impedit. Quia,
+        eligendi.
+        Eos delectus laboriosam iste molestias perspiciatis fugit nulla odio earum omnis, rem cum, ipsam aperiam veritatis
+        perferendis vitae ratione eius deserunt, quas molestiae sequi voluptatibus placeat accusamus aspernatur! Nulla,
+        sequi?
     </div>
     <br><br><br><br><br>
     <div class="nasakuhinja" id="nasakuhinja">
@@ -147,6 +163,8 @@ Eaque, libero ipsum esse voluptatum ea consectetur aspernatur. Dicta minima qui 
     </div>
     <br><br><br><br><br>
 </div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
 <script src="/js/turisti.js"></script>
 </body>
 </html>

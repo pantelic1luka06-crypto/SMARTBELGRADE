@@ -44,4 +44,33 @@
     } else{
         alert("unesite ime,prezime i broj telefona");
     }
- }
+}
+
+  
+    const map = L.map('map').setView([44.8176, 20.4633], 13);
+
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+   
+    L.marker([44.8176, 20.4633])
+    .addTo(map)
+    .bindPopup('SmartBelgrade 📍')
+    .openPopup();
+
+const locations = [
+    { name: "Kalemegdan", coords: [44.8231, 20.4504] },
+    { name: "Beograd na vodi", coords: [44.8106, 20.4489] },
+    { name: "Zemun – Gardoš", coords: [44.8483, 20.4029] },
+    { name: "Hram Svetog Save", coords: [44.7980, 20.4691] },
+    { name: "Ada Ciganlija", coords: [44.7866, 20.4136] }
+];
+
+locations.forEach(loc => {
+    L.marker(loc.coords)
+        .addTo(map)
+        .bindPopup(loc.name);
+});
+

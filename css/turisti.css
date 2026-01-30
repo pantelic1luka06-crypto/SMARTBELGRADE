@@ -83,15 +83,22 @@ transform: scale(1.5);
     color: red;
     width: 100%;
     padding: 5rem;
+    display: flex;
+    flex: 3;
+    gap: 20px;
 }
-.nocnizivot{
+.navigacija{
     background-color: coral;
     color: azure;
     padding: 3rem;
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
 }
-.navigacija{
+.nocnizivot{
     background-color: darkmagenta;
     padding: 4rem;
+    color: black;
 }
 .nasakuhinja{
     background-color: dodgerblue;
@@ -144,4 +151,12 @@ color: inherit;
     text-align: center;
         font-size: 30px;
         color: coral;
+}
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+}
+.navigacijatext{
+    font-size: 30px;
 }
