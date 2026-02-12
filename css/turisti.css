@@ -99,6 +99,10 @@ transform: scale(1.5);
     background-color: darkmagenta;
     padding: 4rem;
     color: black;
+    display: flex;
+    flex: 50%;
+    gap: 20px;
+    
 }
 .nasakuhinja{
     background-color: dodgerblue;
@@ -158,5 +162,10 @@ color: inherit;
     border-radius: 12px;
 }
 .navigacijatext{
+    font-size: 30px;
+}
+.mladi, .matori {
+    text-align: center;
+    font-weight: bold;
     font-size: 30px;
 }
