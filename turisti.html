@@ -86,21 +86,22 @@
 </div>
 <br><br><br><br><br><br><br><br><br><br>
     <div class="znamenitosti" id="znamenitosti">
-        <div style="text-align: center;">
+        <div class="slika1">
         <img id="slideImage"> <br>
         <button id="prethodna" onclick="prevSlide()">prethodna</button>
         <button id="prethodna" onclick="nextSlide()">sledeca</button>
         </div>
-            <div id="slideText" >
-            </div> <br><br><br>
-            <div style="text-align: center;">
-                <h1>REZERVACIJA OBILAZAKA NAZNACENIH DESTINACIJA</h1>
+        <div class="rezervacija">
+            <h1>REZERVACIJA OBILAZAKA NAZNACENIH DESTINACIJA</h1> <br><br><br>
             <form action="">
                 <input type="time" name="" id="vreme"> <br><br><br>
                 <input type="date" name="" id="datum"> <br><br><br><br><br>
                 <button id="prethodna" onclick="ture()">rezervisi</button>
             </form>
         </div>
+            <div id="slideText" >
+            </div> <br><br><br>
+            
       
       
     </div>
@@ -121,17 +122,74 @@
         <div class="mladi">
 Beograd nudi energične klubove i barove sa najnovijom muzikom i DJ nastupima. Popularne žurke i tematske večeri privlače
 studente i mlade iz celog grada. SmartBelgrade ti pomaže da pronađeš najbolja mesta i uvek budeš u toku sa aktuelnim
-događajima.
-<img id="klubs">
-<div id="klub"></div>
+događajima. <br><br>
+<img id="klubs"> <br><br><br>
+<div id="klub"></div> <br><br><br>
+<button class="strkl" onclick="prosli()">prethodna</button>
+<button class="strkl" onclick="openPopup()">Rezerviši</button>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+
+        <h2>Rezervacija</h2>
+
+        <form id="rezForm">
+            <label>Ime:</label>
+            <input type="text" required>
+
+            <label>Broj osoba:</label>
+            <input type="number" required>
+
+            <label>Paket:</label>
+            <select>
+                <option>Standard — 1000 RSD</option>
+                <option>VIP — 2500 RSD</option>
+                <option>Premium — 4000 RSD</option>
+            </select>
+
+            <button class="strkl" type="submit">Pošalji</button>
+        </form>
+    </div>
+</div>
+
+<button class="strkl" onclick="sldc()">sledeca</button>
 
         </div>
         <div class="matori">
 Za one koji više vole opuštenu atmosferu, grad nudi prijatne lounge barove i restorane sa živom muzikom. Degustacije
 vina i mirnije večeri pružaju savršenu priliku za druženje i razgovor. Uz SmartBelgrade, lako možeš otkriti preporučena
-mesta koja kombinuju kvalitetnu ponudu i ugodnu atmosferu.
-<img id="kafanas">
-<div id="kafana"></div>
+mesta koja kombinuju kvalitetnu ponudu i ugodnu atmosferu. <br><br>
+<img id="kafanas"> <br><br><br>
+<div id="kafana"></div> <br><br><br>
+<button class="strkl" onclick="prosli1()">prethodna</button>
+<button class="strkl" onclick="openPopup()">Rezerviši</button>
+
+<div id="popup" class="popup">
+    <div class="popup-content1">
+        <span class="close" onclick="closePopup()">&times;</span>
+
+        <h2>Rezervacija</h2>
+
+        <form id="rezForm">
+            <label>Ime:</label>
+            <input type="text" required>
+
+            <label>Broj osoba:</label>
+            <input type="number" required>
+
+            <label>Paket:</label>
+            <select>
+                <option>Standard — 1000 RSD</option>
+                <option>VIP — 2500 RSD</option>
+                <option>Premium — 4000 RSD</option>
+            </select>
+
+            <button class="strkl" type="submit">Pošalji</button>
+        </form>
+    </div>
+</div>
+<button class="strkl" onclick="sldc1()">sledeca</button>
         </div>
     </div>
     <br><br><br><br><br>

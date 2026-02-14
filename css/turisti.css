@@ -101,7 +101,7 @@ transform: scale(1.5);
     color: black;
     display: flex;
     flex: 50%;
-    gap: 20px;
+    gap: 50px;
     
 }
 .nasakuhinja{
@@ -121,10 +121,9 @@ color: inherit;
 }
 
 .znamenitosti{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
 }
 #prethodna{
     border-radius: 30px;
@@ -138,14 +137,33 @@ color: inherit;
 }
 #slideImage{
     border: black 10px;
-    width: 300px;
+    width: 500px;
     border-radius: 40px;
+    backdrop-filter: blur(6px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        transition: transform 0.4s ease;
+}
+#slideImage:hover{
+transform: rotateY(10deg) scale(1.04);
+}
 
-}
 #slideText{
-    font-size: 2rem;
-    text-align: center;
-}
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-size: 2rem;
+        grid-column: 1/ span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        #slideText:hover{
+            transform: translateY(-5px) scale(1.02);
+                box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+
  #vreme {
     text-align: center;
     font-size: 30px;
@@ -163,9 +181,147 @@ color: inherit;
 }
 .navigacijatext{
     font-size: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 25px;
+}
+.navigacijatext:hover{
+    transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45), 0 0 15px rgba(255, 255, 255, 0.1);
 }
 .mladi, .matori {
     text-align: center;
     font-weight: bold;
     font-size: 30px;
+}
+#klub, #kafana{
+    background-color: #1a1a2e;
+        color: #fff;
+        padding: 20px 25px;
+        border-radius: 14px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        font-family: 'Arial', sans-serif;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 500px;
+        text-align: center;
+        margin: 10px auto;
+}
+ #kafana:hover{
+    transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+#klub{
+    transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    }
+
+#klubs, #kafanas{
+    border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+ #kafanas:hover{
+    transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+#klubs:hover{
+    transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+.slika1{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding-top: 30px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        text-align: center;
+        margin: 0px;
+        padding-bottom: 15px;
+}
+.rezervacija{
+background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding-top: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin: 0px;
+   
+    
+}
+#klubs, #kafanas{
+    width: 100%;
+}
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: red;
+    padding: 25px;
+    border-radius: 14px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content input,
+.popup-content select {
+    width: 100%;
+    margin: 8px 0 15px;
+    padding: 8px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
+.strkl{
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+       
+        color: #fff;
+        padding: 14px 28px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25), 0 0 0 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+}
+.strkl:hover{
+    transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35), 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.strkl:active{
+    transform: translateY(2px) scale(0.98);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+.mladi, .matori{
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+        color: #fff;
+        padding: 20px 25px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
+        font-family: 'Verdana', sans-serif;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 15px auto;
+        text-align: center;
+}
+.mladi:hover{
+    transform: translateY(-6px) scale(1.04);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+.matori:hover{
+    transform: translateY(-6px) scale(1.04);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
 }
