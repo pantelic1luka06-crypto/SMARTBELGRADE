@@ -9,7 +9,8 @@ body{
     display: flex;
     padding: 6rem 2rem;
     font-size: 16px;
-    height: 100vh;
+    min-height: 100vh;
+    
     
 }
 .proba{
@@ -324,4 +325,99 @@ background: rgba(255, 255, 255, 0.15);
 .matori:hover{
     transform: translateY(-6px) scale(1.04);
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 768px) {
+
+    .container1 {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .proba article {
+        max-width: 100%;
+    }
+
+    .kartica-pregled h2 {
+        font-size: 1.2rem;
+    }
+
+    .kartica-pregled p {
+        font-size: 14px;
+    }
+
+    .znamenitosti {
+        gap: 20px;
+    }
+
+    #slideText {
+        font-size: 1.2rem;
+        grid-column: auto;
+        text-align: center;
+    }
+
+    #vreme,
+    #datum {
+        font-size: 18px;
+    }
+
+    .navigacijatext {
+        font-size: 18px;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    .mladi,
+    .matori {
+        font-size: 18px;
+    }
+
+    .strkl {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 1024px) {
+
+    .container1 {
+        padding: 3rem 1rem;
+        height: auto;
+    }
+
+    .proba {
+        gap: 1rem;
+    }
+
+    .znamenitosti {
+        grid-template-columns: 1fr;
+        padding: 3rem 1rem;
+    }
+
+    #slideImage {
+        width: 100%;
+    }
+
+    .navigacija {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .nocnizivot {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .mladi,
+    .matori {
+        font-size: 22px;
+    }
+
+    .nasakuhinja {
+        padding: 3rem 1rem;
+    }
+
+    .smestaji {
+        padding: 2rem 1rem;
+    }
 }
