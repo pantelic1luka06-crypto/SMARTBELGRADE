@@ -105,16 +105,24 @@ transform: scale(1.5);
     gap: 50px;
     
 }
-.nasakuhinja{
+.smestaji{
     background-color: dodgerblue;
     padding: 6rem;
     color: black;
 
 }
-.smestaji{
+.nasakuhinja{
     background-color: olivedrab;
     color: whitesmoke;
     padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    text-align: center;
+    gap: 20px;
+
+    
+    
 }
 a{
 text-decoration: none;
@@ -193,7 +201,7 @@ transform: rotateY(10deg) scale(1.04);
 .mladi, .matori {
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
 }
 #klub, #kafana{
     background-color: #1a1a2e;
@@ -219,6 +227,8 @@ transform: rotateY(10deg) scale(1.04);
 #klubs, #kafanas{
     border-radius: 12px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 80px;
+        height: 200px;
 }
  #kafanas:hover{
     transform: scale(1.05);
@@ -377,6 +387,8 @@ background: rgba(255, 255, 255, 0.15);
         width: 100%;
         margin-top: 10px;
     }
+    
+
 }
 @media (max-width: 1024px) {
 
@@ -415,9 +427,50 @@ background: rgba(255, 255, 255, 0.15);
 
     .nasakuhinja {
         padding: 3rem 1rem;
+        grid-template-columns: 1fr;
     }
 
     .smestaji {
         padding: 2rem 1rem;
     }
+   
+}
+#domace1, #frans{
+    width: 150px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        cursor: pointer;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        color: white;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+}
+#opisff, #opisdomace{
+background-color: yellowgreen;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        color: #fff9c4;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+}
+#fastfood, #domace{
+        background-color: #2e7d32;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: slideFade 1.5s ease forwards;
 }

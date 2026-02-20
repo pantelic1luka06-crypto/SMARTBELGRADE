@@ -144,3 +144,28 @@ function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
 
+let frans=new Array
+frans[0]="slike/fran1.png";
+frans[1] = "slike/fran2.png";
+frans[2] = "slike/fran3.png";
+let index3 = 0;
+
+let domace=new Array
+domace[0]= "slike/domace1.png";
+domace[1] = "slike/domace2.png";
+domace[2] = "slike/domace3.png";
+let index4 = 0;
+ 
+function promeniFran() {
+    index3 = (index3 + 1) % frans.length;
+    document.getElementById("frans").src = frans[index3];
+}
+function promeniDomace() {
+    index4 = (index4 + 1) % domace.length;
+    document.getElementById("domace1").src = domace[index4];
+}
+setInterval(promeniFran, 3000);
+setInterval(promeniDomace, 3000);
+
+
+
