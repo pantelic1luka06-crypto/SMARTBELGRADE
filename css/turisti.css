@@ -9,7 +9,8 @@ body{
     display: flex;
     padding: 6rem 2rem;
     font-size: 16px;
-    height: 100vh;
+    min-height: 100vh;
+    
     
 }
 .proba{
@@ -104,16 +105,40 @@ transform: scale(1.5);
     gap: 50px;
     
 }
-.nasakuhinja{
+.smestaji{
     background-color: dodgerblue;
     padding: 6rem;
     color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
 
 }
-.smestaji{
+#map1{
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 3;
+}
+.hoteli{
+    grid-column: 1 / 2;
+}
+.apartmani{
+    grid-column: 2 / 3;
+}
+
+.nasakuhinja{
     background-color: olivedrab;
     color: whitesmoke;
     padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    text-align: center;
+    gap: 20px;
+
+    
+    
 }
 a{
 text-decoration: none;
@@ -174,7 +199,7 @@ transform: rotateY(10deg) scale(1.04);
         font-size: 30px;
         color: coral;
 }
-#map {
+#map, #map1 {
     height: 400px;
     width: 100%;
     border-radius: 12px;
@@ -192,7 +217,7 @@ transform: rotateY(10deg) scale(1.04);
 .mladi, .matori {
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
 }
 #klub, #kafana{
     background-color: #1a1a2e;
@@ -218,6 +243,8 @@ transform: rotateY(10deg) scale(1.04);
 #klubs, #kafanas{
     border-radius: 12px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 80px;
+        height: 200px;
 }
  #kafanas:hover{
     transform: scale(1.05);
@@ -324,4 +351,223 @@ background: rgba(255, 255, 255, 0.15);
 .matori:hover{
     transform: translateY(-6px) scale(1.04);
         box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 768px) {
+
+    .container1 {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .proba article {
+        max-width: 100%;
+    }
+
+    .kartica-pregled h2 {
+        font-size: 1.2rem;
+    }
+
+    .kartica-pregled p {
+        font-size: 14px;
+    }
+
+    .znamenitosti {
+        gap: 20px;
+    }
+
+    #slideText {
+        font-size: 1.2rem;
+        grid-column: auto;
+        text-align: center;
+    }
+
+    #vreme,
+    #datum {
+        font-size: 18px;
+    }
+
+    .navigacijatext {
+        font-size: 18px;
+    }
+
+    #map {
+        height: 300px;
+    }
+
+    .mladi,
+    .matori {
+        font-size: 18px;
+    }
+
+    .strkl {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .smestaji{
+        grid-template-columns: 1fr;
+    }
+    
+
+}
+@media (max-width: 1024px) {
+
+    .container1 {
+        padding: 3rem 1rem;
+        height: auto;
+    }
+
+    .proba {
+        gap: 1rem;
+    }
+
+    .znamenitosti {
+        grid-template-columns: 1fr;
+        padding: 3rem 1rem;
+    }
+
+    #slideImage {
+        width: 100%;
+    }
+
+    .navigacija {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .nocnizivot {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .mladi,
+    .matori {
+        font-size: 22px;
+    }
+
+    .nasakuhinja {
+        padding: 3rem 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .smestaji {
+        padding: 2rem 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        
+    }
+   
+}
+#domace1, #frans{
+    width: 150px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        cursor: pointer;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        color: white;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+}
+#opisff, #opisdomace{
+background-color: yellowgreen;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        color: #fff9c4;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        margin: 10px;
+}
+#fastfood, #domace{
+        background-color: #2e7d32;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: slideFade 1.5s ease forwards;
+}
+h1{
+        max-width: 620px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #7a1f1f;
+            background: #fff7ed;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid #e11d48;
+            box-shadow: 0 6px 18px rgba(120, 30, 30, 0.15);
+            text-align: center;
+            margin: 10px;
+            font-size: 30px;
+}
+#hoteli, #apartmani{
+    border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        overflow: hidden;
+        display: block;
+            width: 70%;
+            height: 70%;
+            transition: transform 0.3s ease;
+            
+}
+#hoteli:hover {
+    transform: scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+        
+}
+#apartmani:hover{
+    transform: scale(1.05);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+#hotelio, #apartmanio{
+    margin-top: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 8px 12px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        font-size: 20px;
+}
+.apartmani, .hoteli{
+    background: #3029B2;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 20px;
+}
+#smestajid{
+    padding: 12px 25px;
+        font-size: 16px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+#smestajid:hover{
+    transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
 }

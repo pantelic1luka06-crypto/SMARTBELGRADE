@@ -110,17 +110,37 @@ prikaz(index1)
 
   
     const map = L.map('map').setView([44.8176, 20.4633], 13);
+const map1 = L.map('map1').setView([44.8176, 20.4633], 13);
 
     
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map1);
+
    
     L.marker([44.8176, 20.4633])
     .addTo(map)
     .bindPopup('SmartBelgrade 📍')
     .openPopup();
+
+const smestaji = [
+    { name: "Hotel Moskva", coords: [44.8149, 20.4620] },
+    { name: "Hyatt Regency Belgrade", coords: [44.8125, 20.4324] },
+    { name: "Crowne Plaza Belgrade", coords: [44.8122, 20.4313] },
+    { name: "Apartman Palilula", coords: [44.8178, 20.4849] },
+    { name: "Apartman Dorćol", coords: [44.8260, 20.4633] },
+    { name: "Apartman Zemun", coords: [44.8483, 20.4029] }
+];
+
+smestaji.forEach(loc => {
+    L.marker(loc.coords)
+        .addTo(map1)
+        .bindPopup(loc.name);
+});
 
 const locations = [
     { name: "Kalemegdan", coords: [44.8231, 20.4504] },
@@ -144,3 +164,95 @@ function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
 
+let frans=new Array
+frans[0]="slike/fran1.png";
+frans[1] = "slike/fran2.png";
+frans[2] = "slike/fran3.png";
+let index3 = 0;
+
+let domace=new Array
+domace[0]= "slike/domace1.png";
+domace[1] = "slike/domace2.png";
+domace[2] = "slike/domace3.png";
+let index4 = 0;
+ 
+function promeniFran() {
+    index3 = (index3 + 1) % frans.length;
+    document.getElementById("frans").src = frans[index3];
+}
+function promeniDomace() {
+    index4 = (index4 + 1) % domace.length;
+    document.getElementById("domace1").src = domace[index4];
+}
+setInterval(promeniFran, 3000);
+setInterval(promeniDomace, 3000);
+
+
+let hoteli = new Array();
+hoteli[0]="slike/hotel1.png";
+hoteli[1] = "slike/hotel2.png";
+hoteli[2] = "slike/hotel3.png";
+
+let opho=new Array();
+opho[0] ="Istorijski hotel sa klasičnim enterijerom pruža autentično iskustvo i centralnu lokaciju u samom srcu grada. Gostima je na raspolaganju restoranska tradicija, luksuzno opremljene sobe i neposredna blizina kulturnih znamenitosti.";
+opho[1] = "Elegantni hotel nudi udobne i moderne sobe sa panoramskim pogledom, idealan za poslovna putovanja i turističke posete. U okviru hotela se nalaze restorani, barovi i profesionalni konferencijski kapaciteti svetskog nivoa.";
+opho[2] = "Luksuzni hotel u centru grada kombinuje savremeni dizajn sa vrhunskim sadržajima za poslovne i privatne goste. Gostima su na raspolaganju elegantne sobe, spa centar, restoran sa internacionalnom kuhinjom i konferencijske sale.";
+
+let apartmani = new Array();
+apartmani[0] = "slike/ap1.png";
+apartmani[1] = "slike/ap2.png";
+apartmani[2] = "slike/ap3.png";
+
+let opap = new Array();
+opap[0] = "Komforan apartman sa modernim nameštajem i potpuno opremljenom kuhinjom pruža miran boravak u prijatnoj okolini. Idealno je mesto za odmor, ali i za one koji žele brz pristup centru grada.";
+opap[1] = "Šarmantan apartman u vibrantnom delu grada omogućava lak pristup restoranima, kafićima i kulturnim sadržajima. Prostrane sobe i prirodno osvetljenje čine boravak prijatnim i udobnim.";
+opap[2] = "Prostran apartman sa panoramskim pogledom na reku nudi mir i opuštanje u blizini istorijskog jezgra Zemuna. Gostima je dostupna potpuno opremljena kuhinja i udobni prostori za odmor i druženje.";
+
+let h=0;
+let a=0;
+const hs=document.getElementById("hoteli");
+const ho=document.getElementById("hotelio");
+const as = document.getElementById("apartmani");
+const ao = document.getElementById("apartmanio");
+
+function prikaz2(i) {
+    hs.src = hoteli[i];
+    ho.textContent = opho[i];
+}
+function sldc2() {
+    h++;
+    if (h >= hoteli.length) {
+        h = 0;
+    }
+    prikaz2(h);
+}
+function prosli2() {
+    h--;
+    if (h < 0) {
+        h = hoteli.length - 1;
+    }
+    prikaz2(h);
+
+}
+prikaz2(h);
+
+function prikaz3(i) {
+    as.src = apartmani[i];
+    ao.textContent = opap[i];
+}
+function sldc3() {
+    a++;
+    if (a >= apartmani.length) {
+        a = 0;
+    }
+    prikaz3(a);
+}
+function prosli3() {
+    a--;
+    if (a < 0) {
+        a = apartmani.length - 1;
+    }
+    prikaz3(a);
+
+}
+prikaz3(a);
