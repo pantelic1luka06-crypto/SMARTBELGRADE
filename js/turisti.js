@@ -147,8 +147,21 @@ const locations = [
     { name: "Beograd na vodi", coords: [44.8106, 20.4489] },
     { name: "Zemun – Gardoš", coords: [44.8483, 20.4029] },
     { name: "Hram Svetog Save", coords: [44.7980, 20.4691] },
-    { name: "Ada Ciganlija", coords: [44.7866, 20.4136] }
+    { name: "Ada Ciganlija", coords: [44.7866, 20.4136] },
+    { name: "Hotel Moskva", coords: [44.8149, 20.4620] },
+    { name: "Hyatt Regency Belgrade", coords: [44.8125, 20.4324] },
+    { name: "Crowne Plaza Belgrade", coords: [44.8122, 20.4313] },
+    { name: "Apartman Palilula", coords: [44.8178, 20.4849] },
+    { name: "Apartman Dorćol", coords: [44.8260, 20.4633] },
+    { name: "Apartman Zemun", coords: [44.8483, 20.4029] },
+    { name: "Freestyler", coords: [44.8201, 20.4485] },
+    { name: "Kafana Bajka", coords: [44.7575, 20.4346] },
+    { name: "Klub Komitet", coords: [44.8205, 20.4483] },
+    { name: "Kafana Pukni Zoro", coords: [44.8450, 20.4157] },
+    { name: "Kafana Tarapana", coords: [44.8093, 20.4651] },
+
 ];
+
 
 locations.forEach(loc => {
     L.marker(loc.coords)
