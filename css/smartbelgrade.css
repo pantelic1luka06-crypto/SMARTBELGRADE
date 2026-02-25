@@ -162,3 +162,42 @@ body{
     transform: scale(1)
   }
 }
+
+@media  (max-width: 1024px) {
+  .naslov {
+    font-size: 4rem;
+    margin-top: 15%;
+  }
+
+  .stisni {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+}
+
+@media  (max-width: 768px) {
+  .naslov {
+    font-size: 2.5rem;
+    margin-top: 25%;
+    padding: 0 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .stisni {
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+  }
+
+  .login-box {
+    width: 90% !important;
+    padding: 20px;
+  }
+}
