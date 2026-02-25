@@ -217,8 +217,55 @@ grada.</div>
 <div class="hoteli"> 
 <img src="" alt="" id="hoteli"> <br>
 <div style="display: inline;">
-    <button onclick="prosli2()" id="smestajid"><</button>
+<button onclick="prosli2()" id="smestajid"><</button>
 <button onclick="sldc2()" id="smestajid">></button>
+<button onclick="openPopup1()" id="openPopupBtn">Rezervacija</button>
+
+<div id="popupOverlay" class="popup-overlay">
+    <div class="popup-box">
+        <button onclick="closePopup1()" class="popup-close" id="closePopupBtn">&times;</button>
+
+        <h2>Planiraj putovanje</h2>
+
+        <form class="popup-form">
+
+            <label>Datum dolaska</label>
+            <input type="date" name="date">
+
+            <div class="row">
+                <div>
+                    <label>Odrasli</label>
+                    <input type="number" min="1" value="2">
+                </div>
+                <div>
+                    <label>Deca</label>
+                    <input type="number" min="0" value="0">
+                </div>
+            </div>
+
+            <label>Smeštaj</label>
+            <select>
+                <option>Hotel Moskva</option>
+                <option>Hotel Crown Plaza</option>
+                <option>Hajat</option>
+                <option>Apartman Dorćol</option>
+                <option>Apartman Palilula</option>
+                <option>Apartman Zemun</option>
+            </select>
+
+            <label>Kapacitet sobe</label>
+            <select>
+                <option>1 osoba</option>
+                <option>2 osobe</option>
+                <option>3 osobe</option>
+                <option>4 osobe</option>
+                <option>Porodična soba</option>
+            </select>
+
+            <button onclick="alert1()" type="submit" class="submit-btn">Proveri dostupnost</button>
+        </form>
+    </div>
+</div>
 </div>
 
 <div id="hotelio"></div>
@@ -228,6 +275,53 @@ grada.</div>
 <div style="display: inline;">
 <button onclick="prosli3()" id="smestajid"><</button>
 <button onclick="sldc3()" id="smestajid">></button>
+<button onclick="openPopup1()" id="openPopupBtn">Rezervacija</button>
+
+<div id="popupOverlay" class="popup-overlay">
+    <div class="popup-box">
+        <button onclick="closePopup1()" class="popup-close" id="closePopupBtn">&times;</button>
+
+        <h2>Planiraj putovanje</h2>
+
+        <form class="popup-form">
+
+            <label>Datum dolaska</label>
+            <input type="date" name="date">
+
+            <div class="row">
+                <div>
+                    <label>Odrasli</label>
+                    <input type="number" min="1" value="2">
+                </div>
+                <div>
+                    <label>Deca</label>
+                    <input type="number" min="0" value="0">
+                </div>
+            </div>
+
+            <label>Smeštaj</label>
+            <select>
+                <option>Hotel Moskva</option>
+                <option>Hotel Crown Plaza</option>
+                <option>Hajat</option>
+                <option>Apartman Dorćol</option>
+                <option>Apartman Palilula</option>
+                <option>Apartman Zemun</option>
+            </select>
+
+            <label>Kapacitet sobe</label>
+            <select>
+                <option>1 osoba</option>
+                <option>2 osobe</option>
+                <option>3 osobe</option>
+                <option>4 osobe</option>
+                <option>Porodična soba</option>
+            </select>
+
+            <button onclick="alert1()"  type="submit" class="submit-btn">Proveri dostupnost</button>
+        </form>
+    </div>
+</div>
 </div>
 <div id="apartmanio"></div>
 
