@@ -182,7 +182,7 @@ transform: rotateY(10deg) scale(1.04);
 }
 
 #slideText{
-    background:#8D6E63;
+    background:#40448C;
         padding: 20px;
         border-radius: 16px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
@@ -217,7 +217,7 @@ transform: rotateY(10deg) scale(1.04);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.05);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         padding: 25px;
-        background-color: #8D6E63;
+        background-color: #40448C;
 }
 .navigacijatext:hover{
     transform: translateY(-6px) scale(1.02);
@@ -304,7 +304,7 @@ background: rgba(255, 255, 255, 0.15);
 }
 
 .popup-content {
-    background: red;
+    background: white;
     padding: 25px;
     border-radius: 14px;
     width: 320px;
@@ -345,7 +345,7 @@ background: rgba(255, 255, 255, 0.15);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 .mladi, .matori{
-    background: #8D6E63;
+    background: #40448C;
         color: #fff;
         padding: 20px 25px;
         border-radius: 16px;
@@ -501,7 +501,7 @@ background-color: #7a1f1f;
         margin: 10px;
 }
 #fastfood, #domace{
-background-color: #8D6E63;
+background-color: #40448C;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             animation: slideFade 1.5s ease forwards;
@@ -555,7 +555,7 @@ h1{
         font-size: 20px;
 }
 .apartmani, .hoteli{
-    background: #8D6E63;
+    background: #40448C;
         border-radius: 15px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
