@@ -275,3 +275,16 @@ function prosli3() {
 
 }
 prikaz3(a);
+
+function openPopup1() {
+    document.getElementById("popupOverlay").style.display = "flex";
+}
+
+function closePopup1() {
+    document.getElementById("popupOverlay").style.display = "none";
+}
+function alert1(){
+    alert("Vas zahtev je uspesno prosledjen")
+}
+
+
