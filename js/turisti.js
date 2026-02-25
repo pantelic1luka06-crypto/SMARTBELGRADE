@@ -159,6 +159,12 @@ const locations = [
     { name: "Klub Komitet", coords: [44.8205, 20.4483] },
     { name: "Kafana Pukni Zoro", coords: [44.8450, 20.4157] },
     { name: "Kafana Tarapana", coords: [44.8093, 20.4651] },
+    { name: "Poncho", coords: [44.8236, 20.4132] },
+    { name: "McDonald's", coords: [44.8149, 20.4612] },
+    { name: "KFC", coords: [44.8159, 20.4604] },
+    { name: "Walter", coords: [44.8154, 20.4631] },
+    { name: "Bucko", coords: [44.8099, 20.4705] }
+
 
 ];
 
