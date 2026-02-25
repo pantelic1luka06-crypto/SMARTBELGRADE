@@ -79,17 +79,18 @@ transform: scale(1.5);
 }
 
 .znamenitosti{
-    background-color: bisque;
+    background: rgba(255, 228, 196, 0.15);
+        backdrop-filter: blur(12px) saturate(160%);
+        -webkit-backdrop-filter: blur(12px) saturate(160%);
     font-size: 15px;
-    color: red;
-    width: 100%;
+   width: 100%;
     padding: 5rem;
-    display: flex;
-    flex: 3;
     gap: 20px;
 }
 .navigacija{
-    background-color: coral;
+    background: rgba(255, 228, 196, 0.15);
+        backdrop-filter: blur(12px) saturate(160%);
+        -webkit-backdrop-filter: blur(12px) saturate(160%);
     color: azure;
     padding: 3rem;
     display: grid;
@@ -97,7 +98,9 @@ transform: scale(1.5);
         gap: 30px;
 }
 .nocnizivot{
-    background-color: darkmagenta;
+background: rgba(255, 228, 196, 0.15);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
     padding: 4rem;
     color: black;
     display: flex;
@@ -106,7 +109,9 @@ transform: scale(1.5);
     
 }
 .smestaji{
-    background-color: dodgerblue;
+    background: rgba(255, 228, 196, 0.15);
+        backdrop-filter: blur(12px) saturate(160%);
+        -webkit-backdrop-filter: blur(12px) saturate(160%);
     padding: 6rem;
     color: black;
     display: grid;
@@ -128,7 +133,9 @@ transform: scale(1.5);
 }
 
 .nasakuhinja{
-    background-color: olivedrab;
+background: rgba(255, 228, 196, 0.15);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
     color: whitesmoke;
     padding: 2rem;
     display: grid;
@@ -149,14 +156,16 @@ color: inherit;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
+    color: white;
 }
 #prethodna{
     border-radius: 30px;
     margin-left: 25px;
     margin-top: 25px;
     font-size: 2rem;
-    background-color: transparent;
-    color: coral;
+    background-color: #D4AF37;
+    color: #1A1A1A;
+
     padding: 5px;
 
 }
@@ -173,7 +182,7 @@ transform: rotateY(10deg) scale(1.04);
 }
 
 #slideText{
-    background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+    background:#8D6E63;
         padding: 20px;
         border-radius: 16px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
@@ -192,12 +201,11 @@ transform: rotateY(10deg) scale(1.04);
  #vreme {
     text-align: center;
     font-size: 30px;
-    color: coral;
-}
+    }
 #datum{
     text-align: center;
         font-size: 30px;
-        color: coral;
+       
 }
 #map, #map1 {
     height: 400px;
@@ -209,6 +217,7 @@ transform: rotateY(10deg) scale(1.04);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.05);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         padding: 25px;
+        background-color: #8D6E63;
 }
 .navigacijatext:hover{
     transform: translateY(-6px) scale(1.02);
@@ -218,6 +227,8 @@ transform: rotateY(10deg) scale(1.04);
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    
+    
 }
 #klub, #kafana{
     background-color: #1a1a2e;
@@ -313,9 +324,9 @@ background: rgba(255, 255, 255, 0.15);
     font-size: 20px;
 }
 .strkl{
-    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    background: #FFE4C4 #FFB347;
        
-        color: #fff;
+        color: palevioletred;
         padding: 14px 28px;
         font-size: 16px;
         font-weight: 600;
@@ -334,7 +345,7 @@ background: rgba(255, 255, 255, 0.15);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 .mladi, .matori{
-    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    background: #8D6E63;
         color: #fff;
         padding: 20px 25px;
         border-radius: 16px;
@@ -477,7 +488,7 @@ h3{
         margin-bottom: 20px;
 }
 #opisff, #opisdomace{
-background-color: yellowgreen;
+background-color: #7a1f1f;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -490,7 +501,7 @@ background-color: yellowgreen;
         margin: 10px;
 }
 #fastfood, #domace{
-        background-color: #2e7d32;
+background-color: #8D6E63;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             animation: slideFade 1.5s ease forwards;
@@ -544,7 +555,7 @@ h1{
         font-size: 20px;
 }
 .apartmani, .hoteli{
-    background: #3029B2;
+    background: #8D6E63;
         border-radius: 15px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
