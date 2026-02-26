@@ -147,8 +147,27 @@ const locations = [
     { name: "Beograd na vodi", coords: [44.8106, 20.4489] },
     { name: "Zemun – Gardoš", coords: [44.8483, 20.4029] },
     { name: "Hram Svetog Save", coords: [44.7980, 20.4691] },
-    { name: "Ada Ciganlija", coords: [44.7866, 20.4136] }
+    { name: "Ada Ciganlija", coords: [44.7866, 20.4136] },
+    { name: "Hotel Moskva", coords: [44.8149, 20.4620] },
+    { name: "Hyatt Regency Belgrade", coords: [44.8125, 20.4324] },
+    { name: "Crowne Plaza Belgrade", coords: [44.8122, 20.4313] },
+    { name: "Apartman Palilula", coords: [44.8178, 20.4849] },
+    { name: "Apartman Dorćol", coords: [44.8260, 20.4633] },
+    { name: "Apartman Zemun", coords: [44.8483, 20.4029] },
+    { name: "Freestyler", coords: [44.8201, 20.4485] },
+    { name: "Kafana Bajka", coords: [44.7575, 20.4346] },
+    { name: "Klub Komitet", coords: [44.8205, 20.4483] },
+    { name: "Kafana Pukni Zoro", coords: [44.8450, 20.4157] },
+    { name: "Kafana Tarapana", coords: [44.8093, 20.4651] },
+    { name: "Poncho", coords: [44.8236, 20.4132] },
+    { name: "McDonald's", coords: [44.8149, 20.4612] },
+    { name: "KFC", coords: [44.8159, 20.4604] },
+    { name: "Walter", coords: [44.8154, 20.4631] },
+    { name: "Bucko", coords: [44.8099, 20.4705] }
+
+
 ];
+
 
 locations.forEach(loc => {
     L.marker(loc.coords)
@@ -256,3 +275,16 @@ function prosli3() {
 
 }
 prikaz3(a);
+
+function openPopup1() {
+    document.getElementById("popupOverlay").style.display = "flex";
+}
+
+function closePopup1() {
+    document.getElementById("popupOverlay").style.display = "none";
+}
+function alert1(){
+    alert("Vas zahtev je uspesno prosledjen")
+}
+
+
