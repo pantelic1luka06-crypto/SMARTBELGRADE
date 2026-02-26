@@ -1,60 +1,94 @@
-#bg-video {
+
+:root{
+  font-family: "Work Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --text: #ffffff;
+  --shadow: rgba(0,0,0,.55);
+  --overlay: rgba(0,0,0,.45);
+  --overlay-2: rgba(0,0,0,.25);
+  --btn-bg: rgba(255,255,255,.10);
+  --btn-border: rgba(255,255,255,.80);
+  --btn-hover-bg: rgba(255,255,255,.95);
+  --btn-hover-text: #111;
+}
+
+*{ box-sizing: border-box; }
+html, body{ height:100%; }
+body{
+  margin:0;
+  font-family: var(--font);
+  color: var(--text);
+  overflow: hidden;
+}
+
+
+#bg-video{
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  z-index: -1; 
-}
-body{
-  overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  object-fit: cover;
+  z-index: -2;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  margin-top: 30vh;
-  font-family: sans-serif;
+
+body::before{
+  content:"";
+  position: fixed;
+  inset:0;
+  background: radial-gradient(80% 70% at 50% 40%, var(--overlay-2), var(--overlay));
+  z-index: -1;
 }
 
-*{
-  font-family:'Times New Roman', Times, serif;
-}
 
-.naslov {
-  color: white;
-  text-align: center;
-  font-size: 60pt;
-  text-decoration: none;
-  font-weight: 100;
-  word-spacing: 30px;
-  font-weight: 300;
+.naslov{
+  margin: 0;
+  padding: 0 16px;
+  text-align:center;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  letter-spacing: .08em;
+  font-weight: 600;
+  text-shadow: 0 10px 30px var(--shadow);
 }
 
 .buttons{
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-    gap: 500px;
+  display:flex;
+  justify-content:center;
+  gap: 100px;
+  flex-wrap: wrap;
+  padding: 20px 16px 0;
 }
 
 .stisni{
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    border: none;
-    font-size: 34px;
-    cursor: pointer;
-    border: 1px solid white;
-    padding: 50px;
+  background: var(--btn-bg);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 16px 22px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  cursor: pointer;
+  min-width: 200px;
 }
 
 .stisni:hover{
-    background-color: white;
-    color: rgb(0, 0, 0);
-    transition-duration: 500ms;
+  background-color:rgba(242, 242, 242, 0.984); 
+  color: black;
+  transition-duration: 400ms;
 }
- 
+
+
+body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap: 22px;
+}
+
+
+@media(max-width:520px){
+  .buttons{gap:60px}
+  .stisni{padding: 20px;}
+  .stisni{min-width: 0px;}
+}

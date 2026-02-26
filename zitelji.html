@@ -1,45 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/zitelji.css">
-    <title>Document</title>
-</head>
-<body>
-<div class="meni">
-    <button class="dugme">Meni</button>
-    <div class="padajuci">
-        <a href="#">Opcija 1</a>
-        <a href="#">Opcija 2</a>
-        <a href="#">Opcija 3</a>
-    </div>
-</div>
+<!doctype html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/zitelji.css" />
+    <title>Žitelji - Smart Belgrade</title>
 
-<div class="meni">
-    <button class="dugme">Meni</button>
-    <div class="padajuci">
-        <a href="#">Opcija 1</a>
-        <a href="#">Opcija 2</a>
-        <a href="#">Opcija 3</a>
-    </div>
-</div>
-<div class="meni">
-    <button class="dugme">Meni</button>
-    <div class="padajuci">
-        <a href="#">Opcija 1</a>
-        <a href="#">Opcija 2</a>
-        <a href="#">Opcija 3</a>
-    </div>
-</div>
-<div class="meni">
-    <button class="dugme">Meni</button>
-    <div class="padajuci">
-        <a href="#">Opcija 1</a>
-        <a href="#">Opcija 2</a>
-        <a href="#">Opcija 3</a>
-    </div>
-</div>
-<script src="/js/zitelji.js"></script>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand"><a href="smartbelgrade.html">SMART BELGRADE</a></div>
+
+      <nav class="menu">
+        <a href="turisti.html"><button class="turistibtn">Turisti</button></a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">Meni</h1>
+        <p class="hero-subtitle">Izaberite željenu uslugu.</p>
+
+        <div class="cards">
+          <a class="card" href="#servisi">
+            <div class="card-media">
+              <img src="slike/CIV-Documents.jpeg" alt="Servisi" />
+            </div>
+            <div class="card-body">
+              <h2>Servisi</h2>
+              <p>Hitne službe, opština, zdravstvo, prijave problema.</p>
+            </div>
+          </a>
+
+          <a class="card" href="#zivot">
+            <div class="card-media">
+              <img src="slike/Knez-Mihailova.jpg" alt="Život u gradu" />
+            </div>
+            <div class="card-body">
+              <h2>Život u gradu</h2>
+              <p>Kultura, sport, događaji, novosti...</p>
+            </div>
+          </a>
+
+          <a class="card" href="#racuni">
+            <div class="card-media">
+              <img
+                src="slike/pen-on-paper-1200x800.jpg"
+                alt="Računi i obaveze"
+              />
+            </div>
+            <div class="card-body">
+              <h2>Računi i obaveze</h2>
+              <p>Infostan, struja, internet, porezi — korisni linkovi.</p>
+            </div>
+          </a>
+
+          <a class="card" href="#navigacija">
+            <div class="card-media">
+              <img src="slike/mapa grada.png" alt="Navigacija" />
+            </div>
+            <div class="card-body">
+              <h2>Navigacija</h2>
+              <p>Mapa, pravci, gradski prevoz i tačke interesa.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <section id="servisi" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Servisi</h2>
+        <p class="section-subtitle">
+          Najbitnije informacije, hitni servisi, prijava problema...
+        </p>
+
+        <div class="grid">
+          <div class="block">
+            <h3>Hitne službe</h3>
+            <ul>
+              <li>Policija: 192</li>
+              <li>Hitna pomoć: 194</li>
+              <li>Vatrogasci: 193</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Imate pitanja?</h3>
+            <p>
+              Klikom na dugme pošaljite upit. Očekujte odgovor u najkraćem
+              vremenskom roku.
+            </p>
+            <button class="btn-primary" type="button">
+              Pošaljite pitanje
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zivot" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Život u gradu</h2>
+        <p class="section-subtitle">
+          Ovde možete pronaći novosti u vezi sa aktuelnim dešavanjima u gradu,
+          manifestacijama, promenama...
+        </p>
+
+        <div class="grid">
+          <div class="block">
+            <h3>Obrazovanje</h3>
+            <p>Tekst / linkovi / slike.</p>
+          </div>
+          <div class="block">
+            <h3>Kultura i sport</h3>
+            <p>Tekst / linkovi / slike.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="racuni" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Računi i obaveze</h2>
+        <p class="section-subtitle">
+          Kostur sa jasnim kontrastom, lako za čitanje.
+        </p>
+
+        <div class="grid">
+          <div class="block">
+            <h3>Komunalije</h3>
+            <ul>
+              <li>Infostan – link</li>
+              <li>Struja – link</li>
+              <li>Voda – link</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Podsetnici</h3>
+            <p>Dodaj pravila, rokove i kratka objašnjenja.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="navigacija" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Navigacija</h2>
+        <p class="section-subtitle">
+          Pronadjite tražene lokacije uz pomoć interaktivne mape.
+        </p>
+
+        <div class="block">
+          <div id="mapZ" aria-label="Mapa"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© Smart Belgrade - All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/zitelji.js"></script>
+  </body>
 </html>
