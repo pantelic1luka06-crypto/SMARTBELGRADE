@@ -15,7 +15,25 @@
     <h1 class="naslov">SMART BELGRADE</h1>
     <div class="buttons">
       <a href="zitelji.html"><button class="stisni">Life</button></a>
+      <button  onclick="up()" id="openLogin" class="stisni">Kreiraj nalog</button>
+      <div id="loginOverlay" class="login-overlay">
+        <div class="login-box">
+          <button onclick="cl()" class="login-close" id="closeLogin">&times;</button>
+      
+          <h2>Dobrodošli</h2>
+          <p class="login-sub">Prijavite se ili napravite nalog</p>
+      
+          <form class="login-form">
+            <input type="text" placeholder="Ime i prezime" required>
+            <input type="email" placeholder="Email adresa" required>
+            <input type="password" placeholder="Lozinka" required>
+      
+            <button type="submit" class="login-btn">Kreiraj nalog</button>
+          </form>
+        </div>
+      </div>
       <a href="turisti.html "><button class="stisni">Tourism</button></a>
     </div>
+    <script src="/js/smartbelgrade.js"></script>
   </body>
 </html>
