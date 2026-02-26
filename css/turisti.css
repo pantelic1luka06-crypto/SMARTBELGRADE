@@ -707,4 +707,51 @@ h1{
         transform: scale(1);
     }
 }
-  
+header{
+   position: relative;
+}
+  .hd1, .hd2{
+    background: linear-gradient(135deg, #40448C, #5a5fd6);
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        padding: 10px 22px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(64, 68, 140, 0.35);
+        display: inline-flex;
+        align-items: center;
+        position: fixed;
+        z-index: 100;
+       
+    
+        
+  }
+  .hd2{
+position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .hd1:hover{
+    background: #ffffff;
+        color: #40448C;
+        box-shadow: 0 6px 18px rgba(64, 68, 140, 0.5);
+        transform: translateY(-2px);
+  }
+  .hd1:active{
+    transform: translateY(0);
+        box-shadow: 0 3px 10px rgba(64, 68, 140, 0.4);
+  }
+  .hd2:hover {
+      background: #ffffff;
+      color: #40448C;
+      box-shadow: 0 6px 18px rgba(64, 68, 140, 0.5);
+      transform: translateY(-2px);
+  }
+
+  .hd2:active {
+      transform: translateY(0);
+      box-shadow: 0 3px 10px rgba(64, 68, 140, 0.4);
+  }
