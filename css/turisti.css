@@ -306,7 +306,7 @@ background: rgba(255, 255, 255, 0.15);
 }
 
 .popup-content {
-    background: white;
+    background: purple;
     padding: 25px;
     border-radius: 14px;
     width: 320px;
@@ -604,7 +604,7 @@ h1{
 
 
 .popup-box {
-    background: purple;
+    background: white;
     border-radius: 20px;
     padding: 28px 30px;
     width: 420px;
@@ -621,7 +621,7 @@ h1{
     top: 14px;
     right: 16px;
     border: none;
-    background: purple;
+    background: white;
     width: 34px;
     height: 34px;
     border-radius: 50%;
