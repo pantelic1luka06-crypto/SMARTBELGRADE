@@ -1,60 +1,89 @@
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  z-index: -1; 
+
+:root{
+  font-family: "Work Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --text: #ffffff;
+  --shadow: rgba(0,0,0,.55);
+  --overlay: rgba(0,0,0,.45);
+  --overlay-2: rgba(0,0,0,.25);
+  --btn-bg: rgba(255,255,255,.10);
+  --btn-border: rgba(255,255,255,.80);
+  --btn-hover-bg: rgba(255,255,255,.95);
+  --btn-hover-text: #111;
 }
+
+*{ box-sizing: border-box; }
+html, body{ height:100%; }
 body{
+  margin:0;
+  font-family: var(--font);
+  color: var(--text);
   overflow: hidden;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  margin-top: 30vh;
-  font-family: sans-serif;
+
+#bg-video{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
 }
 
-*{
-  font-family:'Times New Roman', Times, serif;
+
+body::before{
+  content:"";
+  position: fixed;
+  inset:0;
+  background: radial-gradient(80% 70% at 50% 40%, var(--overlay-2), var(--overlay));
+  z-index: -1;
 }
 
-.naslov {
-  color: white;
-  text-align: center;
-  font-size: 60pt;
-  text-decoration: none;
-  font-weight: 100;
-  word-spacing: 30px;
-  font-weight: 300;
+
+.naslov{
+  margin: 0;
+  padding: 0 16px;
+  text-align:center;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  letter-spacing: .08em;
+  font-weight: 600;
+  text-shadow: 0 10px 30px var(--shadow);
 }
 
 .buttons{
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-    gap: 200px;
+  display:flex;
+  justify-content:center;
+  gap: 100px;
+  flex-wrap: wrap;
+  padding: 20px 16px 0;
 }
 
 .stisni{
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    border: none;
-    font-size: 34px;
-    cursor: pointer;
-    border: 1px solid white;
-    padding: 50px;
+  background: var(--btn-bg);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 16px 22px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  cursor: pointer;
+  min-width: 200px;
 }
 
 .stisni:hover{
-    background-color: white;
-    color: rgb(0, 0, 0);
-    transition-duration: 500ms;
+  background-color:rgba(242, 242, 242, 0.984); 
+  color: black;
+  transition-duration: 400ms;
+}
+
+
+body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap: 22px;
 }
 .login-overlay {
   position: fixed;
@@ -82,8 +111,7 @@ body{
   text-align: center;
   position: relative;
   animation: scaleIn 0.35s ease forwards;
-  transform: scale(.9);
-  
+  transform: scale(0.9);
 }
 
 .login-close {
@@ -121,7 +149,7 @@ body{
   border-radius: 12px;
   border: 1px solid #d4d7e3;
   font-size: 14px;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .login-form input:focus {
@@ -139,65 +167,31 @@ body{
   color: white;
   background: linear-gradient(135deg, #6366f1, #4f46e5);
   cursor: pointer;
-  transition: .25s;
+  transition: 0.25s;
 }
 
 .login-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
 }
-
 @keyframes fadeIn {
   from {
-    opacity: 0
+    opacity: 0;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes scaleIn {
   to {
-    transform: scale(1)
+    transform: scale(1);
   }
 }
 
-@media  (max-width: 1024px) {
-  .naslov {
-    font-size: 4rem;
-    margin-top: 15%;
-  }
-
-  .stisni {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-  }
-}
-
-@media  (max-width: 768px) {
-  .naslov {
-    font-size: 2.5rem;
-    margin-top: 25%;
-    padding: 0 10px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-
-  .stisni {
-    width: 100%;
-    max-width: 300px;
-    font-size: 1rem;
-  }
-
-  .login-box {
-    width: 90% !important;
-    padding: 20px;
-  }
+@media(max-width:520px){
+  .buttons{gap:60px}
+  .stisni{padding: 20px;}
+  .stisni{min-width: 0px;}
 }
