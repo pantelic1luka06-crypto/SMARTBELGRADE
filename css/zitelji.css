@@ -11,7 +11,13 @@
   --radius: 16px;
   --accent: #1d1b5e;
 }
-
+a{
+  text-decoration: none;
+}
+.topbar a{
+  text-decoration: none;
+  color:white;
+}
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +32,6 @@ body {
   line-height: 1.55;
   min-height: 100vh;
 
-  /* background photo placeholder (ti zameniš) */
   background-image: url("slike/pozadina.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,9 +77,7 @@ body::before {
 a:link,
 a:visited {
   text-decoration: none;
-  color: white;
 }
-
 .turistibtn {
   position: relative;
   background: rgba(10, 37, 63, 0.974);
